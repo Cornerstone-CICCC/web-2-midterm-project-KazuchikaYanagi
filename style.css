@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  background-color: #391e84;
+  color: #ff6100;
+}
+#header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#header nav img {
+  width: 100px;
+  height: 100px;
+}
+#header nav ul li {
+  list-style-type: none;
+}
+
+#footer {
+  background-color: #391e84;
+  color: #ff6100;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
