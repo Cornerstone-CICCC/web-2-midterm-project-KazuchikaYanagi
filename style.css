@@ -20,11 +20,90 @@
 #header nav ul li {
   list-style-type: none;
 }
+#header .sun {
+  filter: brightness(0) saturate(100%) invert(50%) sepia(43%) saturate(6297%) hue-rotate(360deg) brightness(102%) contrast(104%);
+}
+
+#main {
+  padding: 0 3% 3rem;
+  background-color: #18063f;
+}
+#main h2 {
+  padding: 1.3rem;
+  color: #ff6100;
+}
+#main .card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px 20px;
+}
+#main .card-list li {
+  list-style-type: none;
+  margin: 0 auto;
+}
+#main .card-list .card {
+  background-color: #cdcdcd;
+  border-radius: 10px;
+  position: relative;
+  width: 300px;
+  height: 60vh;
+}
+#main .card-list .card img {
+  position: absolute;
+  top: 1rem;
+  left: 15px;
+  width: 90%;
+  height: auto;
+}
+#main .card-list .card h3 {
+  position: absolute;
+  top: 11.5rem;
+  left: 1rem;
+  margin: 0 auto;
+}
+#main .card-list .card p {
+  position: absolute;
+  top: 14rem;
+  left: 1rem;
+  width: 90%;
+}
 
 #footer {
   background-color: #391e84;
   color: #ff6100;
   text-align: center;
+}
+
+@media screen and (max-width: 430px) {
+  #header {
+    padding: 0 5% 5%;
+  }
+  #header nav {
+    height: 85px;
+  }
+  #header nav a img {
+    width: 80px;
+    height: 80px;
+  }
+  #header .header_bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  #header .header_bottom form {
+    width: 100%;
+  }
+  #header .header_bottom form input {
+    width: 80%;
+  }
+  #header .header_bottom .sun {
+    filter: brightness(0) saturate(100%) invert(50%) sepia(43%) saturate(6297%) hue-rotate(360deg) brightness(102%) contrast(104%);
+  }
+  #main .card-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
