@@ -3,8 +3,15 @@
   padding: 0;
 }
 
-#header {
+.morning_mode {
+  background-color: #eff6ff;
+}
+
+.night_mode {
   background-color: #391e84;
+}
+
+#header {
   color: #ff6100;
 }
 #header nav {
@@ -69,7 +76,6 @@
 }
 
 #footer {
-  background-color: #391e84;
   color: #ff6100;
   text-align: center;
 }

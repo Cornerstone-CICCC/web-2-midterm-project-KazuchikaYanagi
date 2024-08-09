@@ -1,3 +1,7 @@
+const header = document.querySelector("#header");
+const footer = document.querySelector("#footer");
+const nightMode = document.querySelector(".night_mode");
+const morningMode = document.querySelector(".morning_mode");
 const search = document.querySelector("#search");
 const button = document.querySelector("button");
 const cardContainer = document.querySelector(".card-container");
@@ -29,14 +33,18 @@ const getFetchData = async () => {
 };
 
 const createHtml = async (data) => {
-  const div = document.createElement("div");
   cardList.innerHTML = "";
 
-  const title = data.map((movie, i) => {
-    let searchValue = search.value;
-    let regex = new RegExp(searchValue, "i");
+  let searchValue = search.value.trim();
+  if (searchValue === "") {
+    return alert("fill out search box!");
+  }
 
+  let regex = new RegExp(searchValue, "i");
+
+  data.forEach((movie) => {
     if (regex.exec(movie.title)) {
+      console.log(movie.title);
       let li = document.createElement("li");
       li.insertAdjacentHTML(
         "afterbegin",
@@ -53,15 +61,16 @@ const createHtml = async (data) => {
   });
 };
 
-sun.addEventListener("click", function () {});
+sun.addEventListener("click", function () {
+  header.classList.toggle("night_mode");
+  header.classList.toggle("morning_mode");
+  footer.classList.toggle("night_mode");
+  footer.classList.toggle("morning_mode");
+});
 
 button.addEventListener("click", async function () {
   try {
-    // button.removeEventListener("click", function () {
-    //   document.querySelector(".card").insertAdjacentHTML("afterbegin", "");
-    // });
     const movieData = await getFetchData();
-
     createHtml(movieData);
   } catch (err) {
     console.error(err);
