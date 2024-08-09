@@ -11,6 +11,23 @@
   background-color: #391e84;
 }
 
+.morning_main_bg {
+  background-color: #e3faf8;
+}
+
+.night_main_bg {
+  background-color: #18063f;
+}
+
+.night_card {
+  background-color: #cdcdcd;
+}
+
+.morning_card {
+  background-color: #fff;
+  border: solid 1px #000;
+}
+
 #header {
   color: #ff6100;
 }
@@ -33,7 +50,6 @@
 
 #main {
   padding: 0 3% 3rem;
-  background-color: #18063f;
 }
 #main h2 {
   padding: 1.3rem;
@@ -48,8 +64,10 @@
   list-style-type: none;
   margin: 0 auto;
 }
+#main .card-list .not_found {
+  color: #ff6100;
+}
 #main .card-list .card {
-  background-color: #cdcdcd;
   border-radius: 10px;
   position: relative;
   width: 300px;
