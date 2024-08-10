@@ -1,5 +1,6 @@
 const header = document.querySelector("#header");
 const main = document.querySelector("#main");
+const about = document.querySelector("#about");
 const footer = document.querySelector("#footer");
 const nightMode = document.querySelector(".night_mode");
 const morningMode = document.querySelector(".morning_mode");
@@ -39,20 +40,10 @@ const createHtml = async (data) => {
   cardList.innerHTML = "";
 
   let searchValue = search.value.trim();
-  let regex = new RegExp(searchValue, "i");
+  if (!searchValue) return alert("Fill out search box!");
 
-  if (searchValue === "") {
-    return alert("fill out search box!");
-  } else if (regex.test(data.title) === false) {
-    let li = document.createElement("li");
-    li.insertAdjacentHTML(
-      "afterbegin",
-      `
-        <h3 class="not_found">Your input title couldn't match any movies...</h3>
-      `
-    );
-    cardList.append(li);
-  }
+  let regex = new RegExp(searchValue, "i");
+  let matchFound = false;
 
   data.forEach((movie) => {
     if (regex.test(movie.title)) {
@@ -64,6 +55,7 @@ const createHtml = async (data) => {
         <div class="card night_card">
           <img src="https://image.tmdb.org/t/p/original/${movie.backdrop_path}" alt="img">
           <h3>${movie.title}</h3>
+          <span>< Description ></span>
           <p>${movie.overview}</p>
         </div>
         `
@@ -71,18 +63,52 @@ const createHtml = async (data) => {
       cardList.append(li);
     }
   });
+
+  if (!matchFound) {
+    // console.log("hello");
+    let li = document.createElement("li");
+    cardList.insertAdjacentHTML(
+      "afterbegin",
+      `
+      <div>
+        <h3 class="not_found">Your input didn't match any movie titles...</h3>
+      </div>
+      `
+    );
+    cardList.append(li);
+  }
 };
 
 sun.addEventListener("click", function () {
+  sun.getAttribute("src") === "img/sun.svg"
+    ? sun.setAttribute("src", "img/moon.svg")
+    : sun.setAttribute("src", "img/sun.svg");
+
+  sun.getAttribute("src") === "img/sun.svg"
+    ? (search.style.backgroundColor = "#391e84")
+    : (search.style.backgroundColor = "white");
+
+  // sun.getAttribute("src") === "img/sun.svg"
+  //   ? (document.querySelector("#search:focus").style.backgroundColor =
+  //       "#391e84")
+  //   : (document.querySelector("#search:focus").style.backgroundColor = "white");
+
+  console.log(search.style.backgroundColor);
+
   header.classList.toggle("night_mode");
   header.classList.toggle("morning_mode");
   main.classList.toggle("night_main_bg");
   main.classList.toggle("morning_main_bg");
+
   // card.classList.toggle("night_card");
   // card.classList.toggle("morning_card");
   footer.classList.toggle("night_mode");
   footer.classList.toggle("morning_mode");
 });
+
+// about.addEventListener("click", function () {
+//   this.scrollIntoView({ behavior: "smooth" });
+// });
 
 button.addEventListener("click", async function (e) {
   e.preventDefault();

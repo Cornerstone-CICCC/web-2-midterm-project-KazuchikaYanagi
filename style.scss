@@ -3,33 +3,48 @@
   padding: 0;
 }
 
+:root {
+  --font-color: #ff6100;
+  --night-mode: #391e84;
+  --morning-mode: #eff6ff;
+  --night-mode-main: #18063f;
+  --morning-mode-main: #fff;
+  --night-card: #cdcdcd;
+  --morning-card: #fff;
+}
+
+::placeholder {
+  color: var(--font-color);
+}
+
 .morning_mode {
-  background-color: #eff6ff;
+  background-color: var(--morning-mode);
 }
 
 .night_mode {
-  background-color: #391e84;
+  background-color: var(--night-mode);
 }
 
 .morning_main_bg {
-  background-color: #e3faf8;
+  background-color: var(--morning-mode-main);
 }
 
 .night_main_bg {
-  background-color: #18063f;
+  background-color: var(--night-mode-main);
 }
 
 .night_card {
-  background-color: #cdcdcd;
+  background-color: var(--night-card);
 }
 
 .morning_card {
-  background-color: #fff;
+  background-color: var(--morning-card);
   border: solid 1px #000;
 }
 
 #header {
-  color: #ff6100;
+  color: var(--font-color);
+  padding: 0 3% 1rem;
   nav {
     display: flex;
     flex-direction: row;
@@ -42,11 +57,54 @@
     }
 
     ul {
-      li {
-        list-style-type: none;
+      a {
+        color: var(--font-color);
+        text-decoration: none;
+        li {
+          list-style-type: none;
+        }
       }
     }
   }
+
+  .header_bottom {
+    form {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      input {
+        width: 85%;
+        // height: 1.8rem;
+        padding: 1%;
+        border: solid 1px var(--font-color);
+        border-radius: 5px;
+        background-color: var(--night-mode);
+        color: var(--font-color);
+
+        &:focus {
+          background-color: var(--night-mode);
+          // outline: none;
+        }
+      }
+
+      button {
+        padding: 1%;
+        color: var(--font-color);
+        background-color: rgba(0, 0, 0, 0);
+        border: solid 1px var(--font-color);
+        border-radius: 5px;
+
+        &:hover {
+          color: rgba(0, 0, 0, 0);
+          background-color: var(--font-color);
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+
   .sun {
     filter: brightness(0) saturate(100%) invert(50%) sepia(43%) saturate(6297%)
       hue-rotate(360deg) brightness(102%) contrast(104%);
@@ -55,15 +113,17 @@
 
 #main {
   padding: 0 3% 3rem;
+  height: 300vh;
 
   h2 {
-    padding: 1.3rem;
-    color: #ff6100;
+    padding: 2rem 0;
+    color: var(--font-color);
+    font-size: 1.8rem;
   }
 
   .card-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     gap: 20px 20px;
 
     li {
@@ -73,15 +133,15 @@
     }
 
     .not_found {
-      color: #ff6100;
+      color: var(--font-color);
     }
 
     .card {
       border-radius: 10px;
       position: relative;
 
-      width: 300px;
-      height: 60vh;
+      width: 330px;
+      height: 55vh;
 
       img {
         position: absolute;
@@ -93,40 +153,56 @@
 
       h3 {
         position: absolute;
-        top: 11.5rem;
+        top: 12rem;
         left: 1rem;
         // text-align: center;
         margin: 0 auto;
       }
 
-      p {
+      span {
         position: absolute;
-        top: 14rem;
+        top: 13.7rem;
         left: 1rem;
         width: 90%;
+        font-size: 0.9rem;
       }
 
-      // button {
-      //   position: absolute;
-      //   top: 18rem;
-      //   left: calc(50% - 36.78px);
-      //   border: solid 1px #000;
-      //   color: #000;
-      //   padding: 0.5rem;
+      p {
+        position: absolute;
+        top: 15rem;
+        left: 1rem;
+        width: 90%;
+        font-size: 0.9rem;
+      }
+    }
+  }
 
-      //   &:hover {
-      //     color: #fff;
-      //     background-color: #000;
-      //     transition: all 0.5s;
-      //   }
-      // }
+  #about {
+    // padding: 3%;
+    margin-top: 2rem;
+    color: var(--font-color);
+
+    h3 {
+      font-size: 1.8rem;
+      padding: 1rem 0;
+    }
+
+    h4 {
+      font-size: 1.3rem;
+      padding: 1rem 0;
+    }
+
+    p {
+      font-size: 1.1rem;
+      letter-spacing: 1px;
     }
   }
 }
 
 #footer {
-  color: #ff6100;
+  color: var(--font-color);
   text-align: center;
+  padding: 1rem 0;
 }
 
 @media screen and (max-width: 430px) {
@@ -170,6 +246,23 @@
 
       .card {
       }
+    }
+  }
+
+  #about {
+    padding: 1rem 5% 0;
+
+    h3 {
+      padding: 1rem 0;
+      font-size: 1.5rem;
+    }
+
+    h4 {
+      padding: 1rem 0;
+    }
+
+    p {
+      padding: 1rem 0;
     }
   }
 }
