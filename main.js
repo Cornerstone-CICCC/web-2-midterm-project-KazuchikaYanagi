@@ -47,6 +47,7 @@ const createHtml = async (data) => {
 
   data.forEach((movie) => {
     if (regex.test(movie.title)) {
+      matchFound = true;
       console.log(movie.title);
       let li = document.createElement("li");
       li.insertAdjacentHTML(
