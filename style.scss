@@ -95,11 +95,13 @@
         background-color: rgba(0, 0, 0, 0);
         border: solid 1px var(--font-color);
         border-radius: 5px;
+        box-shadow: 5px 5px;
 
         &:hover {
-          color: rgba(0, 0, 0, 0);
-          background-color: var(--font-color);
+          // color: var(--night-mode);
+          // background-color: var(--font-color);
           transition: all 0.3s;
+          box-shadow: 0px 0px;
         }
       }
     }

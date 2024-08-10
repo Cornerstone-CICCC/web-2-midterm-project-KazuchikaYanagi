@@ -90,9 +90,8 @@ sun.addEventListener("click", function () {
     : (search.style.backgroundColor = "white");
 
   // sun.getAttribute("src") === "img/sun.svg"
-  //   ? (document.querySelector("#search:focus").style.backgroundColor =
-  //       "#391e84")
-  //   : (document.querySelector("#search:focus").style.backgroundColor = "white");
+  //   ? (button.style.color = "#391e84")
+  //   : (button.style.color = "white");
 
   console.log(search.style.backgroundColor);
 
