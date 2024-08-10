@@ -107,7 +107,7 @@ sun.addEventListener("click", function () {
 });
 
 // about.addEventListener("click", function () {
-//   this.scrollIntoView({ behavior: "smooth" });
+//   about.style.opacity = "1";
 // });
 
 button.addEventListener("click", async function (e) {

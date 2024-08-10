@@ -63,14 +63,16 @@
 #header nav ul a li {
   list-style-type: none;
 }
-#header .header_bottom form {
-  width: 100%;
+#header .header_bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+#header .header_bottom form {
+  width: 100%;
+}
 #header .header_bottom form input {
-  width: 85%;
+  width: 77%;
   padding: 1%;
   border: solid 1px var(--font-color);
   border-radius: 5px;
@@ -151,7 +153,7 @@
   font-size: 0.9rem;
 }
 #main #about {
-  margin-top: 2rem;
+  margin-top: 31rem;
   color: var(--font-color);
 }
 #main #about h3 {
@@ -193,10 +195,13 @@
     width: 100%;
   }
   #header .header_bottom form input {
-    width: 80%;
+    width: 70%;
   }
   #header .header_bottom .sun {
     filter: brightness(0) saturate(100%) invert(50%) sepia(43%) saturate(6297%) hue-rotate(360deg) brightness(102%) contrast(104%);
+  }
+  #main {
+    height: 1000vh;
   }
   #main .card-list {
     display: flex;
