@@ -202,14 +202,12 @@
   }
   #main {
     height: 1000vh;
+    padding: 0 5%;
   }
   #main .card-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-  #about {
-    padding: 1rem 5% 0;
   }
   #about h3 {
     padding: 1rem 0;

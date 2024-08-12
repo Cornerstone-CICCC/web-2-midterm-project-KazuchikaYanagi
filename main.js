@@ -89,26 +89,15 @@ sun.addEventListener("click", function () {
     ? (search.style.backgroundColor = "#391e84")
     : (search.style.backgroundColor = "white");
 
-  // sun.getAttribute("src") === "img/sun.svg"
-  //   ? (button.style.color = "#391e84")
-  //   : (button.style.color = "white");
-
   console.log(search.style.backgroundColor);
 
   header.classList.toggle("night_mode");
   header.classList.toggle("morning_mode");
   main.classList.toggle("night_main_bg");
   main.classList.toggle("morning_main_bg");
-
-  // card.classList.toggle("night_card");
-  // card.classList.toggle("morning_card");
   footer.classList.toggle("night_mode");
   footer.classList.toggle("morning_mode");
 });
-
-// about.addEventListener("click", function () {
-//   about.style.opacity = "1";
-// });
 
 button.addEventListener("click", async function (e) {
   e.preventDefault();

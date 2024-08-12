@@ -244,6 +244,7 @@
 
   #main {
     height: 1000vh;
+    padding: 0 5%;
     .card-list {
       display: flex;
       flex-direction: column;
@@ -252,8 +253,6 @@
   }
 
   #about {
-    padding: 1rem 5% 0;
-
     h3 {
       padding: 1rem 0;
       font-size: 1.5rem;
