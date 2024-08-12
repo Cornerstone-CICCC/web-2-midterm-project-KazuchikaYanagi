@@ -44,44 +44,47 @@
 
 #header {
   color: var(--font-color);
-  padding: 0 3% 1.5rem;
+  padding: 0 3%;
   width: 94%;
   position: fixed;
   z-index: 2;
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 
-    img {
-      width: 100px;
-      height: 100px;
-    }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
-    ul {
-      a {
-        color: var(--font-color);
-        text-decoration: none;
-        li {
-          list-style-type: none;
-        }
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  ul {
+    a {
+      color: var(--font-color);
+      text-decoration: none;
+      li {
+        list-style-type: none;
       }
     }
   }
 
-  .header_bottom {
+  .right-side_header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row;
+    gap: 1rem;
+    width: 80%;
 
     form {
       width: 100%;
+      display: flex;
+      gap: 0.5rem;
 
       input {
-        width: 77%;
-        // height: 1.8rem;
-        padding: 1%;
+        width: 100%;
+        padding: 0.5rem;
         border: solid 1px var(--font-color);
         border-radius: 5px;
         background-color: var(--night-mode);
@@ -92,7 +95,6 @@
           // outline: none;
         }
       }
-
       button {
         padding: 1%;
         color: var(--font-color);
@@ -109,11 +111,13 @@
         }
       }
     }
-  }
 
-  .sun {
-    filter: brightness(0) saturate(100%) invert(50%) sepia(43%) saturate(6297%)
-      hue-rotate(360deg) brightness(102%) contrast(104%);
+    .sun {
+      width: 30px;
+      height: 30px;
+      filter: brightness(0) saturate(100%) invert(50%) sepia(43%)
+        saturate(6297%) hue-rotate(360deg) brightness(102%) contrast(104%);
+    }
   }
 }
 
@@ -214,28 +218,25 @@
 
 @media screen and (max-width: 430px) {
   #header {
-    width: 90%;
-    nav {
-      height: 85px;
-      a {
-        img {
-          width: 80px;
-          height: 80px;
-        }
+    width: 94%;
+    height: 85px;
+    padding: 0 3%;
+    a {
+      img {
+        width: 80px;
+        height: 80px;
       }
     }
-    padding: 0 5% 5%;
 
-    .header_bottom {
+    .right-side_header {
       display: flex;
       flex-direction: row;
       align-items: center;
+      width: 100%;
 
       form {
-        width: 100%;
-
         input {
-          width: 70%;
+          font-size: 12px;
         }
       }
 

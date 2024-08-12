@@ -44,48 +44,51 @@
 
 #header {
   color: var(--font-color);
-  padding: 0 3% 1.5rem;
+  padding: 0 3%;
   width: 94%;
   position: fixed;
   z-index: 2;
-}
-#header nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-#header nav img {
+#header img {
   width: 100px;
   height: 100px;
 }
-#header nav ul a {
+#header ul a {
   color: var(--font-color);
   text-decoration: none;
 }
-#header nav ul a li {
+#header ul a li {
   list-style-type: none;
 }
-#header .header_bottom {
+#header .right-side_header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row;
+  gap: 1rem;
+  width: 80%;
 }
-#header .header_bottom form {
+#header .right-side_header form {
   width: 100%;
+  display: flex;
+  gap: 0.5rem;
 }
-#header .header_bottom form input {
-  width: 77%;
-  padding: 1%;
+#header .right-side_header form input {
+  width: 100%;
+  padding: 0.5rem;
   border: solid 1px var(--font-color);
   border-radius: 5px;
   background-color: var(--night-mode);
   color: var(--font-color);
 }
-#header .header_bottom form input:focus {
+#header .right-side_header form input:focus {
   background-color: var(--night-mode);
 }
-#header .header_bottom form button {
+#header .right-side_header form button {
   padding: 1%;
   color: var(--font-color);
   background-color: rgba(0, 0, 0, 0);
@@ -93,11 +96,13 @@
   border-radius: 5px;
   box-shadow: 5px 5px;
 }
-#header .header_bottom form button:hover {
+#header .right-side_header form button:hover {
   transition: all 0.3s;
   box-shadow: 0px 0px;
 }
-#header .sun {
+#header .right-side_header .sun {
+  width: 30px;
+  height: 30px;
   filter: brightness(0) saturate(100%) invert(50%) sepia(43%) saturate(6297%) hue-rotate(360deg) brightness(102%) contrast(104%);
 }
 
@@ -181,28 +186,24 @@
 
 @media screen and (max-width: 430px) {
   #header {
-    width: 90%;
-    padding: 0 5% 5%;
-  }
-  #header nav {
+    width: 94%;
     height: 85px;
+    padding: 0 3%;
   }
-  #header nav a img {
+  #header a img {
     width: 80px;
     height: 80px;
   }
-  #header .header_bottom {
+  #header .right-side_header {
     display: flex;
     flex-direction: row;
     align-items: center;
-  }
-  #header .header_bottom form {
     width: 100%;
   }
-  #header .header_bottom form input {
-    width: 70%;
+  #header .right-side_header form input {
+    font-size: 12px;
   }
-  #header .header_bottom .sun {
+  #header .right-side_header .sun {
     filter: brightness(0) saturate(100%) invert(50%) sepia(43%) saturate(6297%) hue-rotate(360deg) brightness(102%) contrast(104%);
   }
   #main {
