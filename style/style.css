@@ -160,23 +160,6 @@
   width: 90%;
   font-size: 0.9rem;
 }
-#main #about {
-  padding-top: 160px;
-  margin-top: 31rem;
-  color: var(--font-color);
-}
-#main #about h3 {
-  font-size: 1.8rem;
-  padding: 1rem 0;
-}
-#main #about h4 {
-  font-size: 1.3rem;
-  padding: 1rem 0;
-}
-#main #about p {
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-}
 
 #footer {
   color: var(--font-color);
