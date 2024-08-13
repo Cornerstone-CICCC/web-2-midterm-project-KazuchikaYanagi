@@ -4,7 +4,6 @@
   width: 94%;
   position: fixed;
   z-index: 2;
-  font-family: "Univers", sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -142,22 +141,21 @@
   justify-content: end;
 }
 
-#main {
-  color: var(--font-color);
-}
-#main #about {
+#about {
   padding: 130px 3% 0;
+  color: var(--font-color);
+  background-color: var(--night-mode-main);
   height: 100vh;
 }
-#main #about h3 {
+#about h3 {
   font-size: 1.8rem;
   padding: 1rem 0;
 }
-#main #about h4 {
+#about h4 {
   font-size: 1.3rem;
   padding: 1rem 0;
 }
-#main #about p {
+#about p {
   font-size: 1.1rem;
   letter-spacing: 1px;
 }
