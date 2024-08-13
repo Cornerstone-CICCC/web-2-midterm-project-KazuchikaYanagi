@@ -1,8 +1,19 @@
+@import "header";
+@import "footer";
+@import "var";
+
+#header {
+  .right-side_header {
+    display: flex;
+    justify-content: end;
+  }
+}
+
 #about {
-  padding-top: 160px;
-  margin-top: 31rem;
+  padding: 130px 3% 0;
   color: var(--font-color);
-  // opacity: 0;
+  background-color: var(--night-mode-main);
+  height: 100vh;
 
   h3 {
     font-size: 1.8rem;
