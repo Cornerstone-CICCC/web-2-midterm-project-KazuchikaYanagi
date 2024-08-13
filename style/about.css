@@ -4,6 +4,7 @@
   width: 94%;
   position: fixed;
   z-index: 2;
+  font-family: "Univers", sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -89,6 +90,7 @@
   color: var(--font-color);
   text-align: center;
   padding: 1rem 0;
+  font-family: "Univers", sans-serif;
 }
 
 * {
