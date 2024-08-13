@@ -4,6 +4,7 @@
   width: 94%;
   position: fixed;
   z-index: 2;
+  font-family: "Univers", sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -81,6 +82,11 @@
   #header .right-side_header form input {
     font-size: 12px;
   }
+  #header .right-side_header form button {
+    font-size: 12px;
+    padding: 0.5rem;
+    box-sizing: border-box;
+  }
   #header .right-side_header .sun {
     filter: brightness(0) saturate(100%) invert(50%) sepia(43%) saturate(6297%) hue-rotate(360deg) brightness(102%) contrast(104%);
   }
@@ -141,21 +147,22 @@
   justify-content: end;
 }
 
-#about {
-  padding: 130px 3% 0;
+#main {
   color: var(--font-color);
-  background-color: var(--night-mode-main);
+}
+#main #about {
+  padding: 130px 3% 0;
   height: 100vh;
 }
-#about h3 {
+#main #about h3 {
   font-size: 1.8rem;
   padding: 1rem 0;
 }
-#about h4 {
+#main #about h4 {
   font-size: 1.3rem;
   padding: 1rem 0;
 }
-#about p {
+#main #about p {
   font-size: 1.1rem;
   letter-spacing: 1px;
 }
