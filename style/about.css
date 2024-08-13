@@ -1,19 +1,17 @@
-#about {
-  padding-top: 160px;
-  margin-top: 31rem;
-  color: var(--font-color);
-}
-#about h3 {
-  font-size: 1.8rem;
-  padding: 1rem 0;
-}
-#about h4 {
-  font-size: 1.3rem;
-  padding: 1rem 0;
-}
-#about p {
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @import "header";
+ *   |         ^^^^^^^^
+ *   '
+ *   style/about.scss 1:9  root stylesheet */
 
-/*# sourceMappingURL=about.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \"header\";\a   \2502          ^^^^^^^^\a   \2575 \a   style/about.scss 1:9  root stylesheet";
+}
