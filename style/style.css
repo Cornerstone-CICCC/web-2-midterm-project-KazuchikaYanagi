@@ -205,7 +205,7 @@
 @media screen and (max-width: 430px) {
   #main {
     height: 1000vh;
-    padding: 90px 5% 0;
+    padding: 160px 5% 0;
   }
   #main .card-list {
     display: flex;
