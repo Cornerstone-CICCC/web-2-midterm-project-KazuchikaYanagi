@@ -149,57 +149,58 @@
 
 #main {
   padding: 110px 3% 3rem;
-  height: 1100vh;
+  min-height: 100vh;
+  height: auto;
 }
 #main h2 {
   padding: 2rem 0;
   color: var(--font-color);
   font-size: 1.8rem;
 }
-#main .card-list {
+#main .card-container {
+  padding: 1rem;
+}
+#main .card-container .card-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 40px 20px;
 }
-#main .card-list li {
+#main .card-container .card-list li {
   list-style-type: none;
   margin: 0 auto;
 }
-#main .card-list .not_found {
+#main .card-container .card-list .not_found {
   color: var(--font-color);
 }
-#main .card-list .card {
+#main .card-container .card-list .card {
   border-radius: 10px;
   position: relative;
-  width: 330px;
-  height: 55vh;
+  width: 350px;
+  height: 57vh;
 }
-#main .card-list .card img {
+#main .card-container .card-list .card img {
   position: absolute;
   top: 1rem;
   left: 15px;
   width: 90%;
   height: auto;
 }
-#main .card-list .card h3 {
+#main .card-container .card-list .card h3 {
   position: absolute;
-  top: 12rem;
+  top: 12.5rem;
   left: 1rem;
   margin: 0 auto;
 }
-#main .card-list .card span {
+#main .card-container .card-list .card .description {
   position: absolute;
-  top: 13.7rem;
+  top: 14.5rem;
   left: 1rem;
   width: 90%;
   font-size: 0.9rem;
-}
-#main .card-list .card p {
-  position: absolute;
-  top: 15rem;
-  left: 1rem;
-  width: 90%;
-  font-size: 0.9rem;
+  border: solid 1px #000;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  background-color: #ebe9e9;
 }
 
 @media screen and (max-width: 430px) {

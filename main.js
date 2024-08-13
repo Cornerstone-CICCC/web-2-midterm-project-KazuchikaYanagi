@@ -56,8 +56,7 @@ const createHtml = async (data) => {
         <div class="card night_card">
           <img src="https://image.tmdb.org/t/p/original/${movie.backdrop_path}" alt="img">
           <h3>${movie.title}</h3>
-          <span>< Description ></span>
-          <p>${movie.overview}</p>
+          <p class="description">${movie.overview}</p>
         </div>
         `
       );
